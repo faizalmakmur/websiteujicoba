@@ -1,4 +1,4 @@
-<img width="1893" height="919" alt="image" src="https://github.com/user-attachments/assets/ce689d78-77bd-4cac-b98c-0f86d968201e" /># 🦷 GIMUT – Edukasi Gigi untuk Anak
+# 🦷 GIMUT – Edukasi Gigi untuk Anak
 
 **GIMUT** (Gigi Imut dan Sehat) adalah website edukatif yang dibuat untuk anak-anak usia sekolah dasar agar lebih memahami pentingnya menjaga kesehatan gigi dan mulut. Website ini menyajikan tampilan menarik, animasi interaktif, serta kuis sederhana untuk membuat proses belajar lebih menyenangkan.
 
