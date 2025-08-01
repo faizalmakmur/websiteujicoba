@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Fun Kids Interactive Quiz</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #ffd194, #d1913c);
+    font-family: 'Montserrat', cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    justify-content: center; 
+  }
+  #quiz-container {
+    background: #fff8dc;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    width: 50%;
+    max-width: 700px;
+    padding: 20px 25px 30px 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center; 
+    margin: 0 auto; 
+  }
+  h1 {
+    color: #d9644a;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px #fddbaf;
+  }
+  #question-number {
+    color: #a34933;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+  #media-container {
+    width: 50%;
+    max-height: 250px;
+    margin: 15px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #eee;
+    box-shadow: inset 0 0 8px #f5bb64;
+    position: relative;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+  }
+  #media-container img,
+  #media-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+  }
+  #question-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #6f2c14;
+    text-align: center;
+    min-height: 60px;
+    padding: 0 8px;
+    animation: fadeInText 0.6s ease forwards;
+  }
+  @keyframes fadeInText {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  #answers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  button.answer-btn {
+  background: #f7a145;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px #c46232;
+  transition: background 0.3s ease, transform 0.15s ease;
+  margin-bottom: 10px; /* Tambahan supaya antar tombol tidak dempet */
+}
+
+button.answer-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px #c46232;
+}
+
+button.answer-btn:hover {
+  background: #e67c2b;
+}
+
+button.answer-btn.correct {
+  background: #4caf50;
+  box-shadow: 0 6px #397d31;
+}
+
+button.answer-btn.incorrect {
+  background: #e74c3c;
+  box-shadow: 0 6px #a32b21;
+}
+
+  #homeBtn {
+    background: #d84315;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 14px 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 20px; /* Jarak dari tombol mulai kuis */
+  }
+  #homeBtn:hover {
+    background: #ff6d00;
+  }
+
+  #next-btn {
+    margin-top: auto;
+    background: #3498db;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px #21618c;
+    transition: background 0.3s ease, transform 0.15s ease;
+    display: none;
+    user-select: none;
+  }
+  #next-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px #21618c;
+  }
+  #next-btn:hover {
+    background: #2874a6;
+  }
+  #result-container {
+    text-align: center;
+    padding: 20px;
+    color: #6f2c14;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #score {
+    font-size: 2.4rem;
+    color: #d9644a;
+    margin-top: 15px;
+    animation: popIn 0.8s ease forwards;
+  }
+  @keyframes popIn {
+    0% {transform: scale(0);}
+    80% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+  }
+  #restart-btn {
+    margin-top: 20px;
+    background: #f39c12;
+    border: none;
+    border-radius: 16px;
+    padding: 14px 25px;
+    font-weight: 700;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 6px #b06e0a;
+    transition: background 0.3s ease, transform 0.15s ease;
+  }
+  #restart-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px #b06e0a;
+  }
+  #restart-btn:hover {
+    background: #d5850b;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background-color: #a8622a;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Mobile friendly */
+  @media (max-width: 400px) {
+    h1 { font-size: 1.5rem; }
+    #question-text { font-size: 1.1rem; }
+    button.answer-btn {
+      font-size: 0.95rem;
+      padding: 10px 12px;
+    }
+    #next-btn, #restart-btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
+
+  
+</style>
+</head>
+<body>
+
+<div id="quiz-container" role="main" aria-live="polite">
+  <h1>Quiz Seru Anak-anak</h1>
+  <div id="question-number">Pertanyaan 1 dari 5</div>
+  <div id="media-container" aria-label="Konten soal multimedia">
+    <img src="" alt="" id="media-image" style="display:none;" />
+    <video id="media-video" controls muted playsinline style="display:none;"></video>
+  </div>
+  <div id="question-text">Loading question...</div>
+  <div id="answers" role="list"></div>
+  <button id="next-btn" aria-label="Tombol untuk melanjutkan ke pertanyaan berikutnya">Berikutnya</button>
+
+  <div id="result-container" aria-live="polite" role="region" aria-label="Hasil kuis">
+    <div>Selamat! Kamu sudah menyelesaikan kuis.</div>
+    <div id="score"></div>
+    <button id="restart-btn">Main Lagi</button>
+
+    <button id="homeBtn" aria-label="Kembali ke Home">Kembali ke Home 🏠</button>
+
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Quiz Seru Anak | Dibuat oleh Muhammad Faizal Makmur ❤️
+</footer>
+
+<script>
+  const quizData = [
+    {
+      question: "1. Mengapa kita harus menyikat gigi setiap hari?",
+      media: {
+        type: "image",
+        src: "assets/logouny.png",
+        alt: "Seekor singa sedang berdiri"
+      },
+      answers: [
+      "A. Supaya tidak dimarahi guru", 
+      "B. Supaya gigi tetap sehat dan bersih", 
+      "C. Agar cepat tidur", 
+      "D. Supaya tidak lapar"],
+      correct: 1
+    },
+    {
+      question: "2. Kapan waktu terbaik untuk menyikat gigi agar tetap sehat?",
+      media: {
+        type: "video",
+        src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+      },
+      answers: [
+      "A. Setelah bangun tidur dan sebelum tidur malam", 
+      "B. Saat main dan sebelum belajar", 
+      "C. Setiap kali merasa bosan", 
+      "D. Saat gigi sudah terasa sakit"],
+      correct: 0
+    },
+    {
+      question: "3. Apa yang bisa terjadi kalau kita jarang menyikat gigi?",
+      media: {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        alt: "Menara Eiffel di Paris"
+      },
+      answers: [
+      "A. Gigi jadi bersih terus", 
+      "B. Gigi jadi kuat dan putih", 
+      "C. Gigi bisa berlubang dan sakit", 
+      "D. Gigi jadi tidak tumbuh"],
+      correct: 2
+    },
+    {
+      question: "4. Apa nama penyakit yang sering muncul kalau gigi tidak dirawat?",
+      media: {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80",
+        alt: "Langit biru terang saat siang hari"
+      },
+      answers: [
+      "A. Sakit kepala", 
+      "B. Flu", 
+      "C. Batuk", 
+      "D. Gigi berlubang (karies)"],
+      correct: 3
+    },
+
+    {
+  question: "5. Bagaimana cara mencegah gigi berlubang selain menyikat gigi?",
+  media: {
+    type: "image",
+    src: "ttps://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80",
+    alt: "Sikat gigi dan pasta gigi"
+  },
+  answers: [
+    "A. Makan permen setiap hari",
+    "B. Minum susu dan periksa ke dokter gigi",
+    "C. Jarang makan sayur",
+    "D. Tidur seharian"
+  ],
+  correct: 1
+}
+
+    
+    
+    
+  ];
+
+  const container = document.getElementById('quiz-container');
+  const questionNumberEl = document.getElementById('question-number');
+  const questionTextEl = document.getElementById('question-text');
+  const answersContainer = document.getElementById('answers');
+  const mediaContainer = document.getElementById('media-container');
+  const mediaImage = document.getElementById('media-image');
+  const mediaVideo = document.getElementById('media-video');
+  const nextBtn = document.getElementById('next-btn');
+  const resultContainer = document.getElementById('result-container');
+  const scoreEl = document.getElementById('score');
+  const restartBtn = document.getElementById('restart-btn');
+  const homeBtn = document.getElementById('homeBtn');
+
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let answered = false;
+
+  function animateFadeOut(element, callback) {
+    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    element.style.opacity = 0;
+    element.style.transform = 'translateY(-15px)';
+    setTimeout(() => {
+      callback();
+      element.style.opacity = 1;
+      element.style.transform = 'translateY(0)';
+    }, 500);
+  }
+
+  function showQuestion() {
+    answered = false;
+    nextBtn.style.display = 'none';
+    answersContainer.innerHTML = '';
+
+    const q = quizData[currentQuestionIndex];
+    questionNumberEl.textContent = `Pertanyaan ${currentQuestionIndex + 1} dari ${quizData.length}`;
+
+    animateFadeOut(questionTextEl, () => {
+      questionTextEl.textContent = q.question;
+    });
+
+    if(q.media.type === "image") {
+      mediaVideo.style.display = 'none';
+      mediaVideo.pause();
+      mediaImage.style.display = 'block';
+      mediaImage.src = q.media.src;
+      mediaImage.alt = q.media.alt || 'Gambar soal';
+    } else if (q.media.type === "video") {
+      mediaImage.style.display = 'none';
+      mediaImage.src = '';
+      mediaVideo.style.display = 'block';
+      mediaVideo.src = q.media.src;
+      mediaVideo.setAttribute('aria-label', 'Video soal');
+      mediaVideo.load();
+      mediaVideo.play().catch(() => {});
+    }
+
+    q.answers.forEach((answer, idx) => {
+      const btn = document.createElement('button');
+      btn.classList.add('answer-btn');
+      btn.textContent = answer;
+      btn.setAttribute('role', 'listitem');
+      btn.disabled = false;
+      btn.addEventListener('click', () => selectAnswer(idx, btn));
+      answersContainer.appendChild(btn);
+    });
+  }
+
+    /* INI KALAU PAKAI CONTINUE */
+  /* function selectAnswer(selectedIndex, button) {
+    if (answered) return;
+    answered = true;
+
+    const correctIndex = quizData[currentQuestionIndex].correct;
+    const buttons = answersContainer.querySelectorAll('button');
+    buttons.forEach((btn, idx) => {
+      btn.disabled = true;
+      btn.classList.remove('correct', 'incorrect');
+      if (idx === correctIndex) {
+        btn.classList.add('correct');
+      }
+    });
+
+    if(selectedIndex === correctIndex) {
+      score++;
+      button.classList.add('correct');
+    } else {
+      button.classList.add('incorrect');
+    }
+
+    nextBtn.style.display = 'block';
+    nextBtn.focus();
+  } */  
+
+  function selectAnswer(selectedIndex, button) {
+  if (answered) return;
+  answered = true;
+
+  const correctIndex = quizData[currentQuestionIndex].correct;
+  const buttons = answersContainer.querySelectorAll('button');
+  buttons.forEach((btn, idx) => {
+    btn.disabled = true;
+    btn.classList.remove('correct', 'incorrect');
+    if (idx === correctIndex) {
+      btn.classList.add('correct');
+    }
+  });
+
+  if (selectedIndex === correctIndex) {
+    score++;
+    button.classList.add('correct');
+  } else {
+    button.classList.add('incorrect');
+  }
+
+  // Otomatis ke soal berikutnya setelah 1 detik
+  setTimeout(() => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1000); // durasi delay (1000ms = 1 detik)
+  }
+
+
+  nextBtn.addEventListener('click', () => {
+    currentQuestionIndex++;
+    if(currentQuestionIndex < quizData.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  });
+
+  restartBtn.addEventListener('click', () => {
+    currentQuestionIndex = 0;
+    score = 0;
+    resultContainer.style.display = 'none';
+    questionNumberEl.style.display = 'block';
+    questionTextEl.style.display = 'block';
+    mediaContainer.style.display = 'block';
+    answersContainer.style.display = 'flex';
+    nextBtn.style.display = 'none';
+    showQuestion();
+  });
+
+  homeBtn.addEventListener('click', () => {
+    window.location.href = 'index.html'; 
+  });
+
+  function showResult() {
+    questionNumberEl.style.display = 'none';
+    questionTextEl.style.display = 'none';
+    mediaContainer.style.display = 'none';
+    answersContainer.style.display = 'none';
+    nextBtn.style.display = 'none';
+
+    resultContainer.style.display = 'flex';
+    scoreEl.textContent = `Skor kamu: ${score} / ${quizData.length}! 🎉🎉🎉`;
+    restartBtn.focus();
+  }
+  
+
+  showQuestion();
+</script>
+</body>
+</html>

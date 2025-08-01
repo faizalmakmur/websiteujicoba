@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
+<title>Peta Lokasi Kesehatan</title>
+<style>
+  /* Reset and base styles */
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f7;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .map-container {
+    position: relative;
+    width: 350px;
+    height: 600px;
+    background: #c6defc;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    overflow: hidden;
+  }
+
+  /* Simple stylized area shapes to simulate a map */
+  .map-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Markers container */
+  .marker {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    border: 3px solid #2979ff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(41, 121, 255, 0.5);
+  }
+  .marker:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(41, 121, 255, 0.8);
+  }
+
+  .marker .dot {
+    width: 12px;
+    height: 12px;
+    background: #2979ff;
+    border-radius: 50%;
+  }
+
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    background: #2979ff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -130%);
+  }
+
+  .marker.active .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Specific marker positions on the map - normalized to container */
+  /* You can adjust these percentages to place markers */
+  #dental-care {
+    top: 65%;
+    left: 30%;
+  }
+  #puskesmas {
+    top: 40%;
+    left: 55%;
+  }
+  #rumah-sakit-gigi {
+    top: 25%;
+    left: 75%;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 400px) {
+    .map-container {
+      width: 320px;
+      height: 550px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="map-container" aria-label="Peta lokasi fasilitas kesehatan">
+  <div class="map-area" role="img" aria-roledescription="peta" aria-label="Peta lokasi Dental Care, Puskesmas, dan Rumah Sakit Gigi">
+    <!-- Markers -->
+    <div class="marker" id="dental-care" tabindex="0" role="button" aria-describedby="tooltip-dental" aria-label="Lokasi Dental Care">
+      <div class="dot"></div>
+      <div class="tooltip" role="tooltip" id="tooltip-dental">Dental Care</div>
+    </div>
+    <div class="marker" id="puskesmas" tabindex="0" role="button" aria-describedby="tooltip-puskesmas" aria-label="Lokasi Puskesmas">
+      <div class="dot"></div>
+      <div class="tooltip" role="tooltip" id="tooltip-puskesmas">Puskesmas</div>
+    </div>
+    <div class="marker" id="rumah-sakit-gigi" tabindex="0" role="button" aria-describedby="tooltip-rumah-sakit-gigi" aria-label="Lokasi Rumah Sakit Gigi">
+      <div class="dot"></div>
+      <div class="tooltip" role="tooltip" id="tooltip-rumah-sakit-gigi">Rumah Sakit Gigi</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Add event listeners to toggle tooltip visibility on click and keyboard (Enter or Space)
+  document.querySelectorAll('.marker').forEach(marker => {
+    marker.addEventListener('click', (e) => {
+      toggleActive(marker);
+    });
+    marker.addEventListener('keyup', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        toggleActive(marker);
+      }
+    });
+  });
+
+  function toggleActive(marker) {
+    // Deactivate other markers
+    document.querySelectorAll('.marker').forEach(m => {
+      if(m !== marker) {
+        m.classList.remove('active');
+      }
+    });
+    marker.classList.toggle('active');
+  }
+
+  // Close tooltip if clicked outside or pressed Escape
+  document.addEventListener('click', e => {
+    if(!e.target.closest('.marker')){
+      document.querySelectorAll('.marker.active').forEach(m => m.classList.remove('active'));
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.marker.active').forEach(m => m.classList.remove('active'));
+    }
+  });
+</script>
+</body>
+</html>
+

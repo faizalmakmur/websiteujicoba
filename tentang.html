@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.1/lottie.min.js"></script>
+    <title>GIMUT 🦷</title>
+
+  </head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tentang Website Ini</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #5a3e1b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: #ff9800;
+    padding: 22px 24px;
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  main {
+    flex-grow: 1;
+    max-width: 720px;
+    margin: 30px auto 50px auto;
+    padding: 0 20px;
+  }
+
+  main h2 {
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: #d9730d;
+    text-align: center;
+  }
+
+  main p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: justify;
+    text-indent: 2em;
+    color: #5a3e1b;
+  }
+
+  main p::first-letter {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d9730d;
+  }
+
+  footer {
+    background: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 16px 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 -4px 8px rgba(243, 156, 18, 0.5);
+  }
+
+  /* Interactive button */
+  #learnMoreBtn {
+    display: block;
+    margin: 24px auto 0 auto;
+    background: #d87c0d;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(216,124,13,0.7);
+    transition: background 0.3s ease, transform 0.15s ease;
+  }
+  #learnMoreBtn:hover {
+    background: #bc6c0b;
+    transform: scale(1.05);
+  }
+  #learnMoreBtn:active {
+    transform: scale(0.95);
+  }
+
+  /* Animated text reveal */
+  #extraContent {
+    max-width: 650px;
+    margin: 18px auto 0 auto;
+    font-size: 1.1rem;
+    color: #7e5e0f;
+    line-height: 1.55;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    text-align: justify;
+  }
+  #extraContent.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    main {
+      margin: 20px 15px 40px 15px;
+      padding: 0 10px;
+    }
+    main h2 {
+      font-size: 1.6rem;
+    }
+    main p, #extraContent {
+      font-size: 1rem;
+    }
+    #learnMoreBtn {
+      font-size: 1rem;
+      padding: 10px 22px;
+    }
+  }
+  
+  p {
+  text-align: justify;
+ 
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+footer p {
+  text-align: center;
+  color: #ffffff;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Awas Bahaya</h1>
+    <nav aria-label="Navigasi utama">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="video.html" class="nav-link">Video</a></li>
+        <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    background: #ff9800;
+    padding: 16px 24px;
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  nav {
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+    color: white;
+    font-size: 22px !important;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: #d87c0d;
+    outline: none;
+  }
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .nav-list {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+
+  .article-card {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+  
+</style>
+
+
+<main>
+  <h2>Awas Bahaya Gigi! Yuk Kenali Penyakitnya!</h2>
+
+  
+  <p class="paragraf-indent"><span class="huruf-pertama">
+    Halo teman-teman! 😁
+Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di halaman ini, kalian akan belajar tentang berbagai penyakit gigi seperti gigi berlubang, radang gusi, dan lainnya. Tapi tenang, semuanya dijelaskan dengan gambar dan video yang seru, supaya kalian nggak takut dan bisa lebih mudah mengerti. </p>
+  <p>
+    Dengan tahu penyakitnya, kalian jadi bisa mencegah dan menjaga gigi tetap sehat dan kuat! Yuk, pelajari lebih lanjut dan jangan lupa gosok gigi setiap hari ya! 🦷✨ </p>
+</span>
+    <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+        <div class="row">
+            <div class="col-md-6">
+
+<div class="tenor-gif-embed" data-postid="15665048730845712851" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/toothache-gif-15665048730845712851">Toothache Sticker</a>from <a href="https://tenor.com/search/toothache-stickers">Toothache Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+            </div>
+            <div class="col-md-6 text-justify my-auto">
+              <p>
+ Ayok kita jaga kesehatan gigi sejak sekarang! Kalau nggak, gigi bisa berlubang dan bikin kita kesakitan seperti di gambar ini. Duh, pasti nggak nyaman banget!"
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+    <!-- Tombol -->
+<div class="text-center my-4">
+  <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#warningModal">
+    ⚠️ Peringatan! Konten Sensitif ⚠️ 
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-dark">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title fw-bold" id="warningLabel">⚠️ Peringatan Konten Sensitif</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+      <div class="modal-body">
+        Halaman ini mengandung gambar-gambar penyakit gigi seperti gigi berlubang, radang gusi, dan infeksi lainnya.<br><br>
+        Jika Anda merasa tidak nyaman dengan gambar medis atau sensitif terhadap konten seperti ini, silakan pertimbangkan kembali sebelum melanjutkan.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <button id="learnMoreBtn" aria-expanded="false" aria-controls="extraContent">Tampilkan</button>
+  <section id="extraContent" aria-hidden="true">
+    <p>
+      Dengan desain yang responsif dan mudah diakses dari berbagai perangkat, website ini menjamin kenyamanan pengguna baik saat menggunakan komputer, tablet, maupun ponsel pintar. Kami berkomitmen untuk terus memperbarui konten dan fitur agar selalu relevan dan membantu pengguna dalam memenuhi kebutuhan informasinya.
+    </p>
+    <p>
+      Kami percaya bahwa sebuah website yang baik tidak hanya menyajikan konten yang berkualitas, tetapi juga menghadirkan pengalaman pengguna yang menyenangkan dan mudah dinavigasi, sehingga pengguna dapat dengan mudah menemukan apa yang mereka cari tanpa hambatan.
+    </p>
+    
+    
+
+
+        </div>
+
+  
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+        <div class="row">
+            <div class="col-md-6">
+              
+            <img src="assets/gosok.gif" alt="Animasi Gigi" style="max-width: 100%; height: auto;" />
+
+
+
+            </div>
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header">Menggosok Gigi</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                voluptate impedit sapiente labore ea facere fuga laboriosam,
+                tempore ipsam officiis numquam, ducimus non animi sed
+                praesentium. Necessitatibus porro dolores esse.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+          <div class="row">
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header">
+                Minum susu <br />
+              </h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                voluptate impedit sapiente labore ea facere fuga laboriosam,
+                tempore ipsam officiis numquam, ducimus non animi sed
+                praesentium. Necessitatibus porro dolores esse.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <!-- <div
+                style="width: 400px;"
+                class="bodymovin article-lottie mx-auto"
+                data-icon="assets/json/man-wearing-mask.json"
+              ></div> -->
+              <img src="assets/minum.gif" alt="Animasi Minum" style="max-width: 100%; height: auto;" />
+
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+          <div class="row">
+            <div class="col-md-6">
+              <div
+                style="width: 400px;"
+                class="bodymovin article-lottie mx-auto"
+                data-icon="assets/json/hand-wash-with-soap.json"
+              ></div>
+            </div>
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header">
+                Wash your hand with <br />
+                anti-bacteria soap - 🧼
+              </h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                voluptate impedit sapiente labore ea facere fuga laboriosam,
+                tempore ipsam officiis numquam, ducimus non animi sed
+                praesentium. Necessitatibus porro dolores esse.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+          <div class="row">
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header">
+                Wash you hand for 20 seconds - 🧼👋🏻
+              </h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                voluptate impedit sapiente labore ea facere fuga laboriosam,
+                tempore ipsam officiis numquam, ducimus non animi sed
+                praesentium. Necessitatibus porro dolores esse.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div
+                style="width: 400px;"
+                class="bodymovin article-lottie mx-auto"
+                data-icon="assets/json/hand-washing.json"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                style="width: 400px;"
+                class="bodymovin article-lottie mx-auto"
+                data-icon="assets/json/corona-doctor.json"
+              ></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="article-header">
+                Defend yourself from corona-virus - 👨🏻‍⚕️
+              </h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                voluptate impedit sapiente labore ea facere fuga laboriosam,
+                tempore ipsam officiis numquam, ducimus non animi sed
+                praesentium. Necessitatibus porro dolores esse.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+
+
+      <!-- Optional JavaScript -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <!-- Popper.js first, then Bootstrap JS -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"
+      ></script>
+      <script src="assets/scripts/lottie.js"></script>
+      <script src="assets/scripts/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </section>
+</main>
+
+<footer>
+        <p class="my-auto">
+          Copyright  <span class="">©</span> Muhammad Faizal Makmur
+        </p>
+      </footer>
+
+<script>
+  const learnMoreBtn = document.getElementById('learnMoreBtn');
+  const extraContent = document.getElementById('extraContent');
+
+  learnMoreBtn.addEventListener('click', () => {
+    const expanded = learnMoreBtn.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      extraContent.classList.remove('visible');
+      extraContent.setAttribute('aria-hidden', 'true');
+      learnMoreBtn.setAttribute('aria-expanded', 'false');
+      learnMoreBtn.textContent = 'Tampilkan';
+    } else {
+      extraContent.classList.add('visible');
+      extraContent.setAttribute('aria-hidden', 'false');
+      learnMoreBtn.setAttribute('aria-expanded', 'true');
+      learnMoreBtn.textContent = 'Tutup';
+    }
+  });
+</script>
+
+</body>
+</html>
+
