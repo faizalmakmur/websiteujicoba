@@ -113,6 +113,27 @@ footer p {
   color: #ffffff;
 }
 
+#learnMoreBtn {
+    display: block;
+    margin: 24px auto 0 auto;
+    background: #d87c0d;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(216,124,13,0.7);
+    transition: background 0.3s ease, transform 0.15s ease;
+  }
+  #learnMoreBtn:hover {
+    background: #bc6c0b;
+    transform: scale(1.05);
+  }
+  #learnMoreBtn:active {
+    transform: scale(0.95);
+  }
 </style>
 </head>
 <body>
@@ -209,8 +230,14 @@ footer p {
 
   <div id="video-description">
     <p>
-    Yuk, tonton video ini! Di dalamnya ada cerita seru dan gambar-gambar lucu yang akan mengajarkan kamu cara merawat gigi dengan benar. Kamu akan tahu kapan harus sikat gigi, makanan apa yang baik untuk gigi, dan kenapa gigi harus selalu bersih. Belajarnya jadi lebih menyenangkan karena sambil nonton video!
+    Yuk, tonton video ini! Di dalamnya ada cerita seru dan gambar-gambar lucu yang akan mengajarkan kamu cara merawat gigi dengan benar. Kamu akan tahu kapan harus sikat gigi, makanan apa yang baik untuk gigi, dan kenapa gigi harus selalu bersih. Belajarnya jadi lebih menyenangkan karena sambil nonton video.
     </p>
+    
+  </div>
+  <div class="col-md-8 mx-auto text-center text-dark">
+    <a href="rumahkuis.html" class="btn mt-2 mb-2 btn-header bubbly-button" id="learnMoreBtn" style="text-decoration: none;">
+      Yuk lanjut ke kuis
+    </a>
   </div>
 </main>
 
