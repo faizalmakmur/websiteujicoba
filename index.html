@@ -22,7 +22,6 @@
 
   <body>
     <main>
-      <!-- Start Navbar Section -->
       <header>
         <div class="header-container">
           <h1>GIMUT 🦷</h1>
@@ -69,7 +68,7 @@
     padding: 0;
   }
   .nav-link {
-  color: white !important; /* force white color */
+  color: white !important; 
   font-weight: 600;
   text-decoration: none;
   font-size: 22px !important;
@@ -81,7 +80,7 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  color: white !important; /* keep white on hover/focus */
+  color: white !important; 
   background-color: #d87c0d;
   outline: none;
 }
@@ -128,9 +127,7 @@ footer p {
 </style>
 
 
-      <!-- End Navbar Section -->
 
-      <!-- Start Head Images Section -->
       <div class="container" >
         <div class="header-card">
           <div class="row">
@@ -138,12 +135,7 @@ footer p {
               <img src="assets/tutimahartuti.png" alt="gigi" style="max-width:55%; height:auto; display:block; margin:0 auto;" /> 
             </div>
           </div>
-              <!-- <div
-                class="bodymovin"
-                data-icon="assets/json/corona-virus.json"
-              ></div> -->
-
-          <!-- Target section -->
+              
         <div id="target-section">
         <div class="col-md-8 mx-auto text-center text-dark">
           <h1 class="header-font text-dark" >Mengapa Kesehatan Mulut Penting?</h1>
@@ -156,27 +148,14 @@ footer p {
         </div>
       </div>  
 
-<!-- Script scroll -->
 <script>
-  document.getElementById('scrollBtn').addEventListener('click', function() {
-    document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });
-  });
+ document.getElementById('scrollBtn').addEventListener('click', function() {
+  document.getElementById('menggosok-gigi').scrollIntoView({ behavior: 'smooth' });
+});
+
 </script>
 
-
-        </div>
-
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col-md-12 heading-section mt-5 text-dark">
-              <h1 class="text-center">Mengapa Kesehatan Mulut Penting?</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos placeat nam ab est. Asperiores doloribus maxime necessitatibus quis nobis facere ex? Vel, labore cupiditate! Laboriosam voluptas porro praesentium veritatis laudantium!
-              </p>
-            </div>
-          </div>
-        </div> -->
-
+       
         <div
           data-aos="fade-right"
           data-aos-duration="2000"
@@ -190,7 +169,7 @@ footer p {
 
             </div>
             <div class="col-md-6 text-center my-auto">
-              <h2 class="article-header">Menggosok Gigi</h2>
+              <h2 class="article-header" id="menggosok-gigi">Menggosok Gigi</h2>
               <p>
                 Menggosok gigi dua kali sehari bikin gigi sehat dan senyum jadi cerah! Yuk, gosok gigimu pagi dan malam sebelum tidur!
               </p>
@@ -213,11 +192,7 @@ footer p {
               </p>
             </div>
             <div class="col-md-6">
-              <!-- <div
-                style="width: 400px;"
-                class="bodymovin article-lottie mx-auto"
-                data-icon="assets/json/man-wearing-mask.json"
-              ></div> -->
+              
             <div class="tenor-gif-embed" data-postid="10864178454770905473" data-share-method="host" data-aspect-ratio="1" 
             data-width="100%"><a href="https://tenor.com/view/soda-beverage-cola-pepsi-thirst-gif-10864178454770905473">Soda Beverage Sticker</a>from <a href="https://tenor.com/search/soda-stickers">Soda Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
@@ -247,61 +222,7 @@ footer p {
           </div>
         </div>
 
-        <!-- <div
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          class="article-card mt-5"
-        >
-          <div class="row">
-            <div class="col-md-6 text-center my-auto">
-              <h2 class="article-header">
-                Wash you hand for 20 seconds - 🧼👋🏻
-              </h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
-                voluptate impedit sapiente labore ea facere fuga laboriosam,
-                tempore ipsam officiis numquam, ducimus non animi sed
-                praesentium. Necessitatibus porro dolores esse.
-              </p>
-            </div>
-            <div class="col-md-6">
-              <div
-                style="width: 400px;"
-                class="bodymovin article-lottie mx-auto"
-                data-icon="assets/json/hand-washing.json"
-              ></div>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          class="article-card mt-5"
-        >
-          <div class="row">
-            <div class="col-md-12">
-              <div
-                style="width: 400px;"
-                class="bodymovin article-lottie mx-auto"
-                data-icon="assets/json/corona-doctor.json"
-              ></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h2 class="article-header">
-                Defend yourself from corona-virus - 👨🏻‍⚕️
-              </h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
-                voluptate impedit sapiente labore ea facere fuga laboriosam,
-                tempore ipsam officiis numquam, ducimus non animi sed
-                praesentium. Necessitatibus porro dolores esse.
-              </p>
-            </div>
-          </div>
-        </div> -->
+        
         <br />
         <br></br>
       </div>
@@ -312,12 +233,10 @@ footer p {
       </footer>
 
 
-      <!-- Optional JavaScript -->
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
         AOS.init();
       </script>
-      <!-- Popper.js first, then Bootstrap JS -->
       <script
         src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -334,15 +253,15 @@ footer p {
   </body>
   <style>
     body {
-  background-color: #ffffff !important; /* Light orange background */
+  background-color: #ffffff !important; 
 }
 
 .container {
-  background-color: #ffffff; /* White background for content */
+  background-color: #ffffff; 
 }
 
 header {
-  background: #ff9800; /* Darker orange for header */
+  background: #ff9800; 
   padding: 16px 24px;
   box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
   color: white;
@@ -359,7 +278,7 @@ header h1 {
 }
 
 .nav-link {
-  color: white; /* White text for nav links */
+  color: white; 
   font-weight: 600;
   text-decoration: none;
   font-size: 1rem;
@@ -371,16 +290,16 @@ header h1 {
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: #e68a00; /* Slightly darker orange on hover */
+  background-color: #e68a00; 
   outline: none;
 }
 
 .article-header {
-  color: #ff5722; /* Orange color for article headers */
+  color: #ff5722; 
 }
 
 footer {
-  background: #ff9800; /* Same dark orange for footer */
+  background: #ff9800; 
   color: white;
   text-align: center;
   padding: 16px 10px;
@@ -390,12 +309,12 @@ footer {
 }
 
 .btn {
-  background-color: #ff5722; /* Button color */
-  color: white; /* Button text color */
+  background-color: #ff5722; 
+  color: white; 
 }
 
 .btn:hover {
-  background-color: #e64a19; /* Darker shade on hover */
+  background-color: #e64a19; 
 }
 
 </style>
