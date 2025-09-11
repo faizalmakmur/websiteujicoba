@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.1/lottie.min.js"></script>
+    <title>GIMUT 🦷</title>
+
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div class="header-container">
+          <a href="index.html"><h1 style="color: #000000;">GIMUT 🦷</h1></a>
+          <nav aria-label="Navigasi utama">
+            <ul class="nav-list">
+              <li><a href="tentang.html" class="nav-link">Penyakit Gigi</a></li>
+              <li><a href="video.html" class="nav-link">Video</a></li>
+              <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+<style>
+  header {
+    background: #f39c12;
+    padding: 16px 24px;
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    
+  }
+  header a {
+    text-decoration: none;
+}
+  nav {
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+  color: white !important; 
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 22px !important;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: white !important; 
+  background-color: #d87c0d;
+  outline: none;
+}
+
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .nav-list {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+
+.container {
+   width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
+.container img,
+.tenor-gif-embed {
+  max-width: 400px;   /* atur sesuai kebutuhan, misalnya 400px */
+  width: 100%;        /* tetap responsif */
+  height: auto;       /* biar tidak gepeng */
+  display: block;
+  margin: 0 auto;     /* biar rata tengah */
+}
+
+.article-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+   background: transparent !important; /* hilangkan warna kotak */
+  border: none !important;            /* hapus garis kotak */
+  box-shadow: none !important;        /* hilangkan efek bayangan */
+}
+
+@media (max-width: 768px) {
+  .article-card {
+    max-width: 95%;  /* di HP hampir full, biar pas */
+    padding: 10px;
+  }
+
+p {
+  text-align: justify;
+ 
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+footer p {
+  text-align: center;
+  color: #ffffff;
+}
+
+.paragraf-indent {
+  text-align: justify;
+  text-indent: 25px;
+  color: #333;
+}
+
+
+
+
+</style>
+
+
+
+      <div class="container" >
+        <div class="header-card">
+      <div class="row">
+            <div class="col-md-6 mx-auto" style="text-align:center;"> 
+              <img src="assets/tutimahartuti.png" alt="gigi" /> 
+            </div>
+          </div> 
+              
+        <div id="target-section">
+        <div class="col-md-8 mx-auto text-center text-dark">
+          <h1 class="header-font text-dark" >Ayo Kita Merawat Gigi</h1>
+          <p <p class="paragraf-indent"><span class="huruf-pertama">
+          Bagaimana caranya? Yuk, kita pelajari bersama langkah-langkah sederhana <br>untuk menjaga gigi agar tetap sehat,
+        kuat, dan membuat senyum kita selalu ceria!
+          </p></span>
+          <button class="btn mt-2 mb-2 btn-header bubbly-button" id="scrollBtn">
+            Mulai Sekarang
+          </button>
+        </div>
+      </div>  
+
+<script>
+ document.getElementById('scrollBtn').addEventListener('click', function() {
+  document.getElementById('menggosok-gigi').scrollIntoView({ behavior: 'smooth' });
+});
+
+</script>
+
+       
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+        <div class="row">
+            <div class="col-md-6">
+
+        <div class="tenor-gif-embed" data-postid="11058736515565360833" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/toothbrush-brush-brushing-teeth-morning-gif-11058736515565360833">Toothbrush Brushing Sticker</a>from <a href="https://tenor.com/search/toothbrush-stickers">Toothbrush Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+
+            </div>
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header" id="menggosok-gigi">Menggosok Gigi</h2>
+              <p>
+                Menggosok gigi dua kali sehari bikin gigi sehat dan senyum jadi cerah! Yuk, gosok gigimu pagi dan malam sebelum tidur!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+          <div class="row">
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header">
+                Minum Susu <br />
+              </h2>
+              <p>
+                Minum susu setiap hari bisa bikin gigi jadi kuat dan sehat. Susu punya banyak kalsium yang dibutuhkan oleh gigi dan tulang kita. Yuk minum susu biar gigi kita nggak gampang copot!.
+              </p>
+            </div>
+            <div class="col-md-6">
+              
+            <div class="tenor-gif-embed" data-postid="10864178454770905473" data-share-method="host" data-aspect-ratio="1" 
+            data-width="100%"><a href="https://tenor.com/view/soda-beverage-cola-pepsi-thirst-gif-10864178454770905473">Soda Beverage Sticker</a>from <a href="https://tenor.com/search/soda-stickers">Soda Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+        <div class="row">
+            <div class="col-md-6">
+            
+            <div class="tenor-gif-embed" data-postid="754921112523929646" data-share-method="host" 
+            data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/candy-sweets-sugar-snacking-treats-gif-754921112523929646">Candy Sweets Sticker</a>from <a href="https://tenor.com/search/candy-stickers">Candy Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            </div>
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header">
+                Jangan Makan Makanan Manis
+              </h2>
+              <p>
+                Permen dan cokelat memang enak, tapi kalau kebanyakan, gigi kita bisa rusak dan bolong! Makanan manis bisa jadi makanan untuk kuman di gigi. Jadi, jangan sering-sering ya, dan jangan lupa sikat gigi setelahnya.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="col-md-8 mx-auto text-center text-dark">
+          <a href="tentang.html" class="btn mt-2 mb-2 btn-header bubbly-button">
+            Yuk lanjut ke penyakit gigi
+          </a>
+        </div>
+
+
+      </div>
+      <footer>
+        <p style="text-align: center;">
+          Copyright <span class="" >©</span> Muhammad Faizal Makmur
+        </p>
+      </footer>
+
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"
+      ></script>
+      <script src="assets/scripts/lottie.js"></script>
+      <script src="assets/scripts/main.js"></script>
+    </main>
+  </body>
+  <style>
+    body {
+  background-color: #ffffff !important; 
+}
+
+.container {
+  background-color: #ffffff; 
+}
+
+header {
+  background: #ff9800; 
+  padding: 16px 24px;
+  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: white; 
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #e68a00; 
+  outline: none;
+}
+
+.article-header {
+  color: #ff5722; 
+}
+
+footer {
+  background: #ff9800; 
+  color: white;
+  text-align: center;
+  padding: 16px 10px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  box-shadow: 0 -4px 8px rgba(255, 152, 0, 0.5);
+}
+
+.btn {
+  background-color: #d87c0d; 
+  color: white; 
+}
+
+.btn:hover {
+  background-color: #bc6c0b; 
+      transform: scale(1.05);
+
+}
+
+</style>
+</html>
