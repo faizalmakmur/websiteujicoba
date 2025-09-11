@@ -172,7 +172,7 @@ footer p {
     <h1>GIMUT 🦷</h1>
     <nav aria-label="Navigasi utama">
       <ul class="nav-list">
-        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home.html" class="nav-link">Perawatan Gigi</a></li>
         <li><a href="video.html" class="nav-link">Video</a></li>
         <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
       </ul>
@@ -245,6 +245,9 @@ footer p {
   border: none !important;
   box-shadow: none !important;
   background-color: transparent !important;
+    max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
  .article-header {
@@ -253,20 +256,75 @@ footer p {
     color: #000000;
   }
 
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Hilangkan efek kotak Bootstrap container */
+.container, .container-fluid, .row, main, section, header, footer {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+#target-section, .warning-section {
+  width: 100%;              /* full background */
+  text-align: center;       /* teks di tengah */
+}
+
+#target-section h1, 
+#target-section p,
+.warning-section h1{
+  color: #d9730d;  /* hanya untuk judul */
+  font-size: 2rem; /* opsional, bisa diperbesar */
+  font-weight: bold;
+    padding-top: 50px;  /* atur sesuai selera */
+
+}
+.warning-section p {
+  max-width: 800px;         /* batasi lebar teks */
+  margin: 0 auto;           /* biar tetap center */
+  padding-top: 10px
   
+  
+}
+
+
+@media (max-width: 768px) {
+  .article-card {
+    max-width: 95%;  /* di HP hampir full, biar pas */
+    padding: 10px;
+  }
+}
+
+.image-container {
+  width: 300px; /* Atur lebar wadah */
+  height: 300px; /* Atur tinggi wadah */
+}
+
+.image-container img {
+  width: 100%; /* Gambar akan mengisi lebar wadah */
+  height: 100%; /* Gambar akan mengisi tinggi wadah */
+  object-fit: cover; /* Pastikan gambar terpotong agar sesuai */
+}
+
 </style>
 
 
 <main>
-  <h2>Awas Bahaya Gigi! Yuk Kenali Penyakitnya!</h2>
-
-  
-  <p class="paragraf-indent"><span class="huruf-pertama">
-    Halo teman-teman! 😁
+  <section class="warning-section">
+  <h1>Awas Bahaya Gigi! Yuk Kenali Penyakitnya!</h1>
+<p class="paragraf-indent"><span class="huruf-pertama"></span>  Halo teman-teman! 😁
 Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di halaman ini, kalian akan belajar tentang berbagai penyakit gigi seperti gigi berlubang, radang gusi, dan lainnya. Tapi tenang, semuanya dijelaskan dengan gambar dan video yang seru, supaya kalian nggak takut dan bisa lebih mudah mengerti. </p>
   <p>
     Dengan tahu penyakitnya, kalian jadi bisa mencegah dan menjaga gigi tetap sehat dan kuat! Yuk, pelajari lebih lanjut dan jangan lupa gosok gigi setiap hari ya! 🦷✨ </p>
 </span>
+</section>
+
+  
     <div
           data-aos="fade-right"
           data-aos-duration="2000"
@@ -287,7 +345,6 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
           </div>
         </div>
 
-    <!-- Tombol -->
 <div class="text-center my-4">
   <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#warningModal">
     ⚠️ Peringatan! Konten Sensitif ⚠️ 
@@ -330,7 +387,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
           class="article-card mt-5"
         >
         <div class="row">
-          <div class="col-md-6 d-flex align-items-center justify-content-center">
+          <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
             <img src="assets/karies.jpg" alt="Animasi Gigi" style="max-width: 100%; height: auto;" />
           </div>
           <div class="col-md-6 text-center my-auto">
@@ -357,7 +414,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
 
               </p>
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
               <img src="assets/gingivitis.jpeg" alt="Animasi Minum" style="max-width: 100%; height: auto;" />
             </div>
           </div>
@@ -369,7 +426,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
   class="article-card mt-5"
 >
   <div class="row">
-    <div class="col-md-6 d-flex align-items-center justify-content-center">
+    <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
       <img
         src="assets/pareodontitis.jpg"
         alt="Gambar Pareidontitis"
@@ -402,7 +459,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
 
               </p>
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
               <img src="assets/abses.jpg" alt="Animasi Minum" style="max-width: 100%; height: auto;" />
             </div>
           </div>
@@ -415,7 +472,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
         >
         
         <div class="row">
-              <div class="col-md-6 d-flex align-items-center justify-content-center">
+              <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
                 <img
                   src="assets/maloklusi.jpg"
                   alt="Gambar Pareidontitis"
@@ -438,7 +495,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
           </p>
         </div>
 
-        <div class="col-md-8 mx-auto text-center text-dark">
+        <div class="image-container col-md-8 mx-auto text-center text-dark">
           <a href="video.html" class="btn mt-2 mb-2 btn-header bubbly-button" id="learnMoreBtn">
             Yuk lanjut ke video
           </a>
