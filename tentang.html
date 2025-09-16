@@ -93,6 +93,7 @@
     box-shadow: 0 -4px 8px rgba(243, 156, 18, 0.5);
   }
 
+  
   /* Interactive button */
   #learnMoreBtn {
     display: block;
@@ -127,6 +128,8 @@
     transform: translateY(20px);
     transition: opacity 0.7s ease, transform 0.7s ease;
     text-align: justify;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
   }
   #extraContent.visible {
     opacity: 1;
@@ -311,6 +314,7 @@ footer p {
   object-fit: cover; /* Pastikan gambar terpotong agar sesuai */
 }
 
+
 </style>
 
 
@@ -371,22 +375,13 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
 </div>
 
   <button id="learnMoreBtn" aria-expanded="false" aria-controls="extraContent">Tampilkan</button>
-  
-   
-   <section id="extraContent" aria-hidden="true">
-
-   
-
-
-        </div>
-
-  
+     <section id="extraContent" aria-hidden="true">
         <div
           data-aos="fade-right"
           data-aos-duration="2000"
           class="article-card mt-5"
         >
-        <div class="row">
+  <div class="row justify-content-center align-items-center text-center">
           <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
             <img src="assets/karies.jpg" alt="Animasi Gigi" style="max-width: 100%; height: auto;" />
           </div>
@@ -404,7 +399,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
           data-aos-duration="2000"
           class="article-card mt-5"
         >
-          <div class="row">
+  <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-6 text-center my-auto">
               <h2 class="article-header">
                 Gingivitis <br />
@@ -425,7 +420,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
   data-aos-duration="2000"
   class="article-card mt-5"
 >
-  <div class="row">
+  <div class="row justify-content-center align-items-center text-center">
     <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
       <img
         src="assets/pareodontitis.jpg"
@@ -448,7 +443,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
           data-aos-duration="2000"
           class="article-card mt-5"
         >
-          <div class="row">
+          <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-6 text-center my-auto">
               <h2 class="article-header">
                 Abses
@@ -471,7 +466,7 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
           class="article-card mt-5"
         >
         
-        <div class="row">
+        <div class="row justify-content-center align-items-center text-center">
               <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
                 <img
                   src="assets/maloklusi.jpg"
@@ -500,10 +495,15 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
             Yuk lanjut ke video
           </a>
         </div>
-        <br />
       </div>
-      
+  </section>    
+</main>
 
+<footer>
+ <p class="my-auto">
+          Copyright  <span class="">©</span> Muhammad Faizal Makmur
+ </p>
+</footer>
       <!-- Optional JavaScript -->
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
@@ -524,14 +524,8 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
       <script src="assets/scripts/main.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  </section>
-</main>
+  
 
-<footer>
-        <p class="my-auto">
-          Copyright  <span class="">©</span> Muhammad Faizal Makmur
-        </p>
-      </footer>
 
 <script>
   const learnMoreBtn = document.getElementById('learnMoreBtn');
@@ -551,6 +545,8 @@ Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di h
       learnMoreBtn.textContent = 'Tutup';
     }
   });
+
+  
 </script>
 
 </body>
