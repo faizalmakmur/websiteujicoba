@@ -1,554 +1,552 @@
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
-      crossorigin="anonymous"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.1/lottie.min.js"></script>
-    <title>GIMUT 🦷 - Penyakit Gigi</title>
+        <link
+                rel="stylesheet"
+                href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+                integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+                crossorigin="anonymous"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="assets/styles/style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.1/lottie.min.js"></script>
+        <title>GIMUT 🦷 - Penyakit Gigi</title>
 
-  </head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tentang Website Ini</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Tentang Website Ini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-  body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #ffffff, #ffffff);
-    color: #5a3e1b;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+            color: #5a3e1b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-  header {
-    background: #ff9800;
-    padding: 22px 24px;
-    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
-    color: white;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
+        header {
+            background: #ff9800;
+            padding: 22px 24px;
+            box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-  main {
-    flex-grow: 1;
-    max-width: 720px;
-    margin: 30px auto 50px auto;
-    padding: 0 20px;
-  }
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
 
-  main h2 {
-    font-weight: 700;
-    font-size: 1.9rem;
-    margin-bottom: 15px;
-    color: #d9730d;
-    text-align: center;
-  }
+        main {
+            flex-grow: 1;
+            max-width: 720px;
+            margin: 30px auto 50px auto;
+            padding: 0 20px;
+        }
 
-  main p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin-bottom: 16px;
-    text-align: justify;
-    text-indent: 2em;
-    color: #5a3e1b;
-  }
+        main h2 {
+            font-weight: 700;
+            font-size: 1.9rem;
+            margin-bottom: 15px;
+            color: #d9730d;
+            text-align: center;
+        }
 
-  main p::first-letter {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #d9730d;
-  }
+        main p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            text-align: justify;
+            text-indent: 2em;
+            color: #5a3e1b;
+        }
 
-  footer {
-    background: #ff9800;
-    color: white;
-    text-align: center;
-    padding: 16px 10px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    box-shadow: 0 -4px 8px rgba(243, 156, 18, 0.5);
-  }
+        main p::first-letter {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d9730d;
+        }
 
-  
-  /* Interactive button */
-  #learnMoreBtn {
-    display: block;
-    margin: 24px auto 0 auto;
-    background: #d87c0d;
-    border: none;
-    color: white;
-    font-weight: 700;
-    padding: 12px 26px;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    box-shadow: 0 5px 12px rgba(216,124,13,0.7);
-    transition: background 0.3s ease, transform 0.15s ease;
-  }
-  #learnMoreBtn:hover {
-    background: #bc6c0b;
-    transform: scale(1.05);
-  }
-  #learnMoreBtn:active {
-    transform: scale(0.95);
-  }
-
-  /* Animated text reveal */
-  #extraContent {
-    max-width: 650px;
-    margin: 18px auto 0 auto;
-    font-size: 1.1rem;
-    color: #7e5e0f;
-    line-height: 1.55;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-    text-align: justify;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  }
-  #extraContent.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    main {
-      margin: 20px 15px 40px 15px;
-      padding: 0 10px;
-    }
-    main h2 {
-      font-size: 1.6rem;
-    }
-    main p, #extraContent {
-      font-size: 1rem;
-    }
-    #learnMoreBtn {
-      font-size: 1rem;
-      padding: 10px 22px;
-    }
-  }
-  
-  p {
-  text-align: justify;
- 
-  font-size: 20px;
-  font-weight: 500;
-  color: #000000;
-}
-footer p {
-  text-align: center;
-  color: #ffffff;
-}
-
-</style>
-</head>
-<body>
-
-<header>
-  <div class="header-container">
-    <h1>GIMUT 🦷</h1>
-    <nav aria-label="Navigasi utama">
-      <ul class="nav-list">
-        <li><a href="home.html" class="nav-link">Perawatan Gigi</a></li>
-        <li><a href="video.html" class="nav-link">Video</a></li>
-        <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<style>
-  header {
-    background: #ff9800;
-    padding: 16px 24px;
-    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .header-container {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-  }
-  nav {
-  }
-  .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 22px;
-    margin: 0;
-    padding: 0;
-  }
-  .nav-link {
-    color: white;
-    font-size: 22px !important;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    user-select: none;
-  }
-  .nav-link:hover,
-  .nav-link:focus {
-    background-color: #d87c0d;
-    outline: none;
-  }
-  @media (max-width: 600px) {
-    .header-container {
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-start;
-    }
-    .nav-list {
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-     
-  }
-
-  .article-card {
-  border: none !important;
-  box-shadow: none !important;
-  background-color: transparent !important;
-    max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
- .article-header {
-    font-size: 20px;
-    text-align: center;
-    color: #000000;
-  }
-
-.container {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* Hilangkan efek kotak Bootstrap container */
-.container, .container-fluid, .row, main, section, header, footer {
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-#target-section, .warning-section {
-  width: 100%;              /* full background */
-  text-align: center;       /* teks di tengah */
-}
-
-#target-section h1, 
-#target-section p,
-.warning-section h1{
-  color: #d9730d;  /* hanya untuk judul */
-  font-size: 2rem; /* opsional, bisa diperbesar */
-  font-weight: bold;
-    padding-top: 50px;  /* atur sesuai selera */
-
-}
-.warning-section p {
-  max-width: 800px;         /* batasi lebar teks */
-  margin: 0 auto;           /* biar tetap center */
-  padding-top: 10px
-  
-  
-}
+        footer {
+            background: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 16px 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 -4px 8px rgba(243, 156, 18, 0.5);
+        }
 
 
-@media (max-width: 768px) {
-  .article-card {
-    max-width: 95%;  /* di HP hampir full, biar pas */
-    padding: 10px;
-  }
-}
+        /* Interactive button */
+        #learnMoreBtn {
+            display: block;
+            margin: 24px auto;
+            background: #d87c0d;
+            border: none;
+            color: white;
+            font-weight: 700;
+            padding: 12px 26px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 5px 12px rgba(216, 124, 13, 0.7);
+            transition: background 0.3s ease, transform 0.15s ease;
+        }
 
-.image-container {
-  width: 300px; /* Atur lebar wadah */
-  height: 300px; /* Atur tinggi wadah */
-}
+        #learnMoreBtn:hover {
+            background: #bc6c0b;
+            transform: scale(1.05);
+        }
 
-.image-container img {
-  width: 100%; /* Gambar akan mengisi lebar wadah */
-  height: 100%; /* Gambar akan mengisi tinggi wadah */
-  object-fit: cover; /* Pastikan gambar terpotong agar sesuai */
-}
+        #learnMoreBtn:active {
+            transform: scale(0.95);
+        }
 
+        /* Animated text reveal */
+        #extraContent {
+            display: none;
+            max-width: 650px;
+            margin: 18px auto 0 auto;
+            font-size: 1.1rem;
+            color: #7e5e0f;
+            line-height: 1.55;
+            text-align: justify;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
 
-</style>
+        /* Responsive */
+        @media (max-width: 600px) {
+            main {
+                margin: 20px 15px 40px 15px;
+                padding: 0 10px;
+            }
 
+            main h2 {
+                font-size: 1.6rem;
+            }
 
-<main>
-  <section class="warning-section">
-  <h1>Awas Bahaya Gigi! Yuk Kenali Penyakitnya!</h1>
-<p class="paragraf-indent"><span class="huruf-pertama"></span>  Halo teman-teman! 😁
-Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di halaman ini, kalian akan belajar tentang berbagai penyakit gigi seperti gigi berlubang, radang gusi, dan lainnya. Tapi tenang, semuanya dijelaskan dengan gambar dan video yang seru, supaya kalian nggak takut dan bisa lebih mudah mengerti. </p>
-  <p>
-    Dengan tahu penyakitnya, kalian jadi bisa mencegah dan menjaga gigi tetap sehat dan kuat! Yuk, pelajari lebih lanjut dan jangan lupa gosok gigi setiap hari ya! 🦷✨ </p>
-</span>
-</section>
+            main p, #extraContent {
+                font-size: 1rem;
+            }
 
-  
-    <div
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          class="article-card mt-5"
-        >
-        <div class="row">
-            <div class="col-md-6">
+            #learnMoreBtn {
+                font-size: 1rem;
+                padding: 10px 22px;
+            }
+        }
 
-<div class="tenor-gif-embed" data-postid="15665048730845712851" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/toothache-gif-15665048730845712851">Toothache Sticker</a>from <a href="https://tenor.com/search/toothache-stickers">Toothache Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        p {
+            text-align: justify;
 
-            </div>
-            <div class="col-md-6 text-justify my-auto">
-              <p>
- Ayok kita jaga kesehatan gigi sejak sekarang! Kalau nggak, gigi bisa berlubang dan bikin kita kesakitan seperti di gambar ini. Duh, pasti nggak nyaman banget!"
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+        }
 
-              </p>
-            </div>
-          </div>
+        footer p {
+            text-align: center;
+            color: #ffffff;
+        }
+
+    </style>
+    </head>
+    <body>
+
+    <header>
+        <div class="header-container">
+            <h1>GIMUT 🦷</h1>
+            <nav aria-label="Navigasi utama">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">Perawatan Gigi</a></li>
+                    <li><a href="video.html" class="nav-link">Video</a></li>
+                    <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-<div class="text-center my-4">
-  <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#warningModal">
-    ⚠️ Peringatan! Konten Sensitif ⚠️ 
-  </button>
-</div>
+    <style>
+        header {
+            background: #ff9800;
+            padding: 16px 24px;
+            box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-<!-- Modal -->
-<div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-dark">
-      <div class="modal-header bg-warning">
-        <h5 class="modal-title fw-bold" id="warningLabel">⚠️ Peringatan Konten Sensitif</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-      </div>
-      <div class="modal-body">
-        Halaman ini mengandung gambar-gambar penyakit gigi seperti gigi berlubang, radang gusi, dan infeksi lainnya.<br><br>
-        Jika Anda merasa tidak nyaman dengan gambar medis atau sensitif terhadap konten seperti ini, silakan pertimbangkan kembali sebelum melanjutkan.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-      </div>
-    </div>
-  </div>
-</div>
+        .header-container {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  <button id="learnMoreBtn" aria-expanded="false" aria-controls="extraContent">Tampilkan</button>
-     <section id="extraContent" aria-hidden="true">
-        <div
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          class="article-card mt-5"
-        >
-  <div class="row justify-content-center align-items-center text-center">
-          <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
-            <img src="assets/karies.jpg" alt="Animasi Gigi" style="max-width: 100%; height: auto;" />
-          </div>
-          <div class="col-md-6 text-center my-auto">
-            <h2 class="article-header">Karies Gigi</h2>
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        nav {
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 22px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: white;
+            font-size: 22px !important;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            background-color: #d87c0d;
+            outline: none;
+        }
+
+        @media (max-width: 600px) {
+            .header-container {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+
+            .nav-list {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+        }
+
+        .article-card {
+            border: none !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .article-header {
+            font-size: 20px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .container {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hilangkan efek kotak Bootstrap container */
+        .container, .container-fluid, .row, main, section, header, footer {
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        #target-section, .warning-section {
+            width: 100%; /* full background */
+            text-align: center; /* teks di tengah */
+        }
+
+        #target-section h1,
+        #target-section p,
+        .warning-section h1 {
+            color: #d9730d; /* hanya untuk judul */
+            font-size: 2rem; /* opsional, bisa diperbesar */
+            font-weight: bold;
+            padding-top: 50px; /* atur sesuai selera */
+
+        }
+
+        .warning-section p {
+            max-width: 800px; /* batasi lebar teks */
+            margin: 0 auto; /* biar tetap center */
+            padding-top: 10px
+
+
+        }
+
+
+        @media (max-width: 768px) {
+            .article-card {
+                max-width: 95%; /* di HP hampir full, biar pas */
+                padding: 10px;
+            }
+        }
+
+        .image-container {
+            width: 300px; /* Atur lebar wadah */
+            height: 300px; /* Atur tinggi wadah */
+        }
+
+        .image-container img {
+            width: 100%; /* Gambar akan mengisi lebar wadah */
+            height: 100%; /* Gambar akan mengisi tinggi wadah */
+            object-fit: cover; /* Pastikan gambar terpotong agar sesuai */
+        }
+
+
+    </style>
+
+
+    <main>
+        <section class="warning-section">
+            <h1>Awas Bahaya Gigi! Yuk Kenali Penyakitnya!</h1>
+            <p class="paragraf-indent"><span class="huruf-pertama"></span> Halo teman-teman! 😁
+                Kalian tahu nggak? Gigi kita bisa sakit lho kalau tidak dijaga dengan baik! Di halaman ini, kalian akan
+                belajar tentang berbagai penyakit gigi seperti gigi berlubang, radang gusi, dan lainnya. Tapi tenang,
+                semuanya dijelaskan dengan gambar dan video yang seru, supaya kalian nggak takut dan bisa lebih mudah
+                mengerti. </p>
             <p>
-              Penyakit ini disebabkan oleh penumpukan plak dan sisa makanan yang menghasilkan asam, yang kemudian merusak lapisan luar gigi (email) hingga menyebabkan lubang.
-            </p>
-          </div>
+                Dengan tahu penyakitnya, kalian jadi bisa mencegah dan menjaga gigi tetap sehat dan kuat! Yuk, pelajari
+                lebih lanjut dan jangan lupa gosok gigi setiap hari ya! 🦷✨ </p>
+            </span>
+        </section>
+
+
+        <div
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                class="article-card mt-5"
+        >
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="tenor-gif-embed" data-postid="15665048730845712851" data-share-method="host"
+                         data-aspect-ratio="1" data-width="100%"><a
+                            href="https://tenor.com/view/toothache-gif-15665048730845712851">Toothache Sticker</a>from <a
+                            href="https://tenor.com/search/toothache-stickers">Toothache Stickers</a></div>
+                    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+                </div>
+                <div class="col-md-6 text-justify my-auto">
+                    <p>
+                        Ayok kita jaga kesehatan gigi sejak sekarang! Kalau nggak, gigi bisa berlubang dan bikin kita
+                        kesakitan seperti di gambar ini. Duh, pasti nggak nyaman banget!"
+
+                    </p>
+                </div>
+            </div>
         </div>
 
-
-        <div
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          class="article-card mt-5"
-        >
-  <div class="row justify-content-center align-items-center text-center">
-            <div class="col-md-6 text-center my-auto">
-              <h2 class="article-header">
-                Gingivitis <br />
-              </h2>
-              <p>
-                Merupakan peradangan pada gusi yang menyebabkan gusi menjadi merah, bengkak, dan mudah berdarah, terutama saat menyikat gigi atau makan.
-
-              </p>
-            </div>
-            <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
-              <img src="assets/gingivitis.jpeg" alt="Animasi Minum" style="max-width: 100%; height: auto;" />
-            </div>
-          </div>
+        <div class="text-center my-4">
+            <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#warningModal">
+                ⚠️ Peringatan! Konten Sensitif ⚠️
+            </button>
         </div>
 
-        <div
-  data-aos="fade-right"
-  data-aos-duration="2000"
-  class="article-card mt-5"
->
-  <div class="row justify-content-center align-items-center text-center">
-    <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
-      <img
-        src="assets/pareodontitis.jpg"
-        alt="Gambar Pareidontitis"
-        style="max-width: 100%; height: auto; width: 400px;"
-      />
-    </div>
-    <div class="col-md-6 text-center my-auto">
-      <h2 class="article-header">Pareidontitis</h2>
-      <p>
-        Adalah kelanjutan dari gingivitis yang tidak diobati, yang menyerang jaringan penyangga gigi hingga menyebabkan gigi goyang dan bahkan bisa tanggal.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-        <div
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          class="article-card mt-5"
-        >
-          <div class="row justify-content-center align-items-center text-center">
-            <div class="col-md-6 text-center my-auto">
-              <h2 class="article-header">
-                Abses
-              </h2>
-              <p>
-               Infeksi bakteri yang terjadi di dalam gigi atau gusi dan menyebabkan nyeri hebat, pembengkakan, bahkan demam, yang biasanya memerlukan perawatan segera.
-
-
-              </p>
+        <!-- Modal -->
+        <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-dark">
+                    <div class="modal-header bg-warning">
+                        <h5 class="modal-title fw-bold" id="warningLabel">⚠️ Peringatan Konten Sensitif</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                    </div>
+                    <div class="modal-body">
+                        Halaman ini mengandung gambar-gambar penyakit gigi seperti gigi berlubang, radang gusi, dan infeksi
+                        lainnya.<br><br>
+                        Jika Anda merasa tidak nyaman dengan gambar medis atau sensitif terhadap konten seperti ini, silakan
+                        pertimbangkan kembali sebelum melanjutkan.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
             </div>
-            <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
-              <img src="assets/abses.jpg" alt="Animasi Minum" style="max-width: 100%; height: auto;" />
-            </div>
-          </div>
         </div>
 
-        <div
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          class="article-card mt-5"
-        >
-        
-        <div class="row justify-content-center align-items-center text-center">
-              <div class="image-container col-md-6 d-flex align-items-center justify-content-center">
-                <img
-                  src="assets/maloklusi.jpg"
-                  alt="Gambar Pareidontitis"
-                  style="max-width: 100%; height: auto; width: 400px;"
-                />
-              </div>
-              <div class="col-md-6 text-center my-auto">
-                <h2 class="article-header">Maloklusi (Gigi tidak rapi)</h2>
-                <p>
-                Kondisi ketika susunan gigi tidak sejajar atau saling bertumpuk, yang bisa menyebabkan gangguan saat mengunyah, berbicara, atau saat membersihkan gigi.
+        <button id="learnMoreBtn" aria-expanded="false" aria-controls="extraContent">Tampilkan</button>
+        <section id="extraContent" aria-hidden="true">
+            <div class="article-card mt-5">
+                <div class="row justify-content-center align-items-center text-center">
+                    <div data-aos="fade-right" data-aos-duration="1500" class="image-container col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/karies.jpg" alt="Animasi Gigi" style="max-width: 100%; height: auto;"/>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500" class="col-md-6 text-center my-auto">
+                        <h2 class="article-header">Karies Gigi</h2>
+                        <p>
+                            Penyakit ini disebabkan oleh penumpukan plak dan sisa makanan yang menghasilkan asam, yang
+                            kemudian merusak lapisan luar gigi (email) hingga menyebabkan lubang.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-card mt-5">
+                <div class="row justify-content-center align-items-center text-center">
+                    <div data-aos="fade-right" data-aos-duration="1500" class="col-md-6 text-center my-auto">
+                        <h2 class="article-header">
+                            Gingivitis <br/>
+                        </h2>
+                        <p>
+                            Merupakan peradangan pada gusi yang menyebabkan gusi menjadi merah, bengkak, dan mudah
+                            berdarah, terutama saat menyikat gigi atau makan.
+
+                        </p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500" class="image-container col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/gingivitis.jpeg" alt="Animasi Minum" style="max-width: 100%; height: auto;"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-card mt-5">
+                <div class="row justify-content-center align-items-center text-center">
+                    <div data-aos="fade-right" data-aos-duration="1500" class="image-container col-md-6 d-flex align-items-center justify-content-center">
+                        <img
+                                src="assets/pareodontitis.jpg"
+                                alt="Gambar Pareidontitis"
+                                style="max-width: 100%; height: auto; width: 400px;"
+                        />
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500" class="col-md-6 text-center my-auto">
+                        <h2 class="article-header">Pareidontitis</h2>
+                        <p>
+                            Adalah kelanjutan dari gingivitis yang tidak diobati, yang menyerang jaringan penyangga gigi
+                            hingga menyebabkan gigi goyang dan bahkan bisa tanggal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-card mt-5">
+                <div class="row justify-content-center align-items-center text-center">
+                    <div data-aos="fade-right" data-aos-duration="1500" class="col-md-6 text-center my-auto">
+                        <h2 class="article-header">
+                            Abses
+                        </h2>
+                        <p>
+                            Infeksi bakteri yang terjadi di dalam gigi atau gusi dan menyebabkan nyeri hebat,
+                            pembengkakan, bahkan demam, yang biasanya memerlukan perawatan segera.
+
+
+                        </p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500" class="image-container col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/abses.jpg" alt="Animasi Minum" style="max-width: 100%; height: auto;"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-card mt-5">
+                <div class="row justify-content-center align-items-center text-center">
+                    <div data-aos="fade-right" data-aos-duration="1500" class="image-container col-md-6 d-flex align-items-center justify-content-center">
+                        <img
+                                src="assets/maloklusi.jpg"
+                                alt="Gambar Pareidontitis"
+                                style="max-width: 100%; height: auto; width: 400px;"
+                        />
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500" class="col-md-6 text-center my-auto">
+                        <h2 class="article-header">Maloklusi (Gigi tidak rapi)</h2>
+                        <p>
+                            Kondisi ketika susunan gigi tidak sejajar atau saling bertumpuk, yang bisa menyebabkan
+                            gangguan saat mengunyah, berbicara, atau saat membersihkan gigi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 100%; text-align: center;">
+                <p style="display: inline-block; text-align: center;">
+                    Setelah kita melihat foto-foto mengenai penyakit gigi,
+                    yuk kita lanjut menonton video.
                 </p>
-              </div>
             </div>
-          </div>
-        
-        <div style="width: 100%; text-align: center;">
-          <p style="display: inline-block; text-align: center;">
-            Setelah kita melihat foto-foto mengenai penyakit gigi, 
-            yuk kita lanjut menonton video.
-          </p>
-        </div>
 
-        <div class="image-container col-md-8 mx-auto text-center text-dark">
-          <a href="video.html" class="btn mt-2 mb-2 btn-header bubbly-button" id="learnMoreBtn">
-            Yuk lanjut ke video
-          </a>
-        </div>
-      </div>
-  </section>    
-</main>
+            <div class="image-container col-md-8 mx-auto text-center text-dark">
+                <a href="video.html" class="btn mt-2 mb-2 btn-header bubbly-button" id="learnMoreBtn">
+                    Yuk lanjut ke video
+                </a>
+            </div>
+        </section>
+    </main>
 
-<footer>
- <p class="my-auto">
-          Copyright  <span class="">©</span> Muhammad Faizal Makmur
- </p>
-</footer>
-      <!-- Optional JavaScript -->
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
+    <footer>
+        <p class="my-auto">
+            Copyright <span class="">©</span> Muhammad Faizal Makmur
+        </p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
         AOS.init();
-      </script>
-      <!-- Popper.js first, then Bootstrap JS -->
-      <script
-        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-        crossorigin="anonymous"
-      ></script>
-      <script src="assets/scripts/lottie.js"></script>
-      <script src="assets/scripts/main.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  
+    </script>
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+            crossorigin="anonymous"
+    ></script>
+    <script src="assets/scripts/lottie.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-<script>
-  const learnMoreBtn = document.getElementById('learnMoreBtn');
-  const extraContent = document.getElementById('extraContent');
+    <script>
+        $(document).ready(function () {
+            $('#learnMoreBtn').on('click', function () {
+                $('#extraContent').slideToggle('slow', function () {
+                    const isVisible = $(this).is(':visible');
+                    $('#learnMoreBtn').attr('aria-expanded', isVisible);
+                    $('#extraContent').attr('aria-hidden', !isVisible);
+                    if (isVisible) {
+                        $('#learnMoreBtn').text('Tutup');
+                    } else {
+                        $('#learnMoreBtn').text('Tampilkan');
+                    }
+                });
+            });
+        });
+    </script>
 
-  learnMoreBtn.addEventListener('click', () => {
-    const expanded = learnMoreBtn.getAttribute('aria-expanded') === 'true';
-    if (expanded) {
-      extraContent.classList.remove('visible');
-      extraContent.setAttribute('aria-hidden', 'true');
-      learnMoreBtn.setAttribute('aria-expanded', 'false');
-      learnMoreBtn.textContent = 'Tampilkan';
-    } else {
-      extraContent.classList.add('visible');
-      extraContent.setAttribute('aria-hidden', 'false');
-      learnMoreBtn.setAttribute('aria-expanded', 'true');
-      learnMoreBtn.textContent = 'Tutup';
-    }
-  });
-
-  
-</script>
-
-</body>
-</html>
+    </body>
+    </html>
 
