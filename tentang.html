@@ -167,24 +167,6 @@
             color: #ffffff;
         }
 
-    </style>
-    </head>
-    <body>
-
-    <header>
-        <div class="header-container">
-            <h1>GIMUT 🦷</h1>
-            <nav aria-label="Navigasi utama">
-                <ul class="nav-list">
-                    <li><a href="home.html" class="nav-link">Perawatan Gigi</a></li>
-                    <li><a href="video.html" class="nav-link">Video</a></li>
-                    <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <style>
         header {
             background: #ff9800;
             padding: 16px 24px;
@@ -210,34 +192,100 @@
             letter-spacing: 2px;
         }
 
-        nav {
-        }
+        .nav-link.active {
+  background-color: #ffffff;
+  color: #ff6d00 !important;
+  font-weight: 700;
+  border-radius: 20px;
+}
 
-        .nav-list {
-            list-style: none;
-            display: flex;
-            gap: 22px;
-            margin: 0;
-            padding: 0;
-        }
+  header {
+    background: #f39c12;
+    padding: 16px 24px;
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.5);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    
+  }
+  header a {
+    text-decoration: none;
+}
+  nav {
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+  color: white !important; 
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 22px !important;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
 
-        .nav-link {
-            color: white;
-            font-size: 22px !important;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 6px 14px;
-            border-radius: 20px;
-            transition: background-color 0.3s ease;
-            user-select: none;
-        }
+.nav-link:hover,
+.nav-link:focus {
+  color: white !important; 
+  background-color: #d87c0d;
+  outline: none;
+}
 
-        .nav-link:hover,
-        .nav-link:focus {
-            background-color: #d87c0d;
-            outline: none;
-        }
+    </style>
+    </head>
+    <body>
+
+
+        <header>
+  <div class="header-container">
+    <a href="index.html"><h1 style="color: #000000;">Penyakit Gigi 🦷</h1></a>
+    <nav aria-label="Navigasi utama">
+      <ul class="nav-list">
+        <li><a href="home.html" class="nav-link">Perawatan Gigi</a></li>
+        <li><a href="tentang.html" class="nav-link ">Penyakit Gigi</a></li>
+        <li><a href="video.html" class="nav-link">Video</a></li>
+        <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <!-- <header>
+        <div class="header-container">
+            <h1>GIMUT 🦷</h1>
+            <nav aria-label="Navigasi utama">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">Perawatan Gigi</a></li>
+                    <li><a href="video.html" class="nav-link">Video</a></li>
+                    <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
+    <style>
+        
 
         @media (max-width: 600px) {
             .header-container {
@@ -532,19 +580,25 @@
 
     <script>
         $(document).ready(function () {
-            $('#learnMoreBtn').on('click', function () {
-                $('#extraContent').slideToggle('slow', function () {
-                    const isVisible = $(this).is(':visible');
-                    $('#learnMoreBtn').attr('aria-expanded', isVisible);
-                    $('#extraContent').attr('aria-hidden', !isVisible);
-                    if (isVisible) {
-                        $('#learnMoreBtn').text('Tutup');
-                    } else {
-                        $('#learnMoreBtn').text('Tampilkan');
-                    }
-                });
-            });
+    $('#learnMoreBtn').on('click', function () {
+        $('#extraContent').slideToggle('slow', function () {
+            const isVisible = $(this).is(':visible');
+            $('#learnMoreBtn').attr('aria-expanded', isVisible);
+            $('#extraContent').attr('aria-hidden', !isVisible);
+            if (isVisible) {
+                $('#learnMoreBtn').text('Tutup');
+                // Scroll otomatis ke konten
+                $('html, body').animate({
+                    scrollTop: $('#extraContent').offset().top - 20 // 20px jarak dari atas
+                }, 800); // durasi scroll 800ms
+            } else {
+                $('#learnMoreBtn').text('Tampilkan');
+            }
         });
+    });
+});
+
+        
     </script>
 
     </body>
