@@ -37,85 +37,171 @@
         }
 
         header {
-  background: #ff9800; 
-  padding: 16px 24px;
-  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+ background: #ff9800; 
+ padding: 16px 24px;
+ box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
+ color: white;
+ position: sticky;
+ top: 0;
+ z-index: 100;
 }
 
 .header-container {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Agar bisa wrap di layar kecil */
+ max-width: 960px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap; /* Agar bisa wrap di layar kecil */
+}
+
+.logo img {
+ height: 50px; /* bisa diganti sesuai kebutuhan */
+ width: auto;
+ display: block;
 }
 
 header h1 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+ margin: 0;
+ font-weight: 700;
+ font-size: 1.8rem;
+ letter-spacing: 2px;
 }
 
 /* Navigasi */
 .nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap; /* Bisa wrap di layar sempit */
-  justify-content: center; /* Center saat wrap */
+ list-style: none;
+ display: flex;
+ gap: 20px;
+ margin: 0;
+ padding: 0;
+ flex-wrap: wrap; /* Bisa wrap di layar sempit */
+ justify-content: center; /* Center saat wrap */
 }
 
+/* Container untuk Dropdown */
+.dropdown {
+ position: relative; /* Penting untuk posisi menu drop-down */
+}
+
+/* Tampilan link standar */
 .nav-link {
-  color: white !important;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 6px 12px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-  user-select: none;
+ color: white !important;
+ font-weight: 600;
+ text-decoration: none;
+ font-size: 1rem;
+ padding: 6px 12px;
+ border-radius: 20px;
+ transition: background-color 0.3s ease;
+ user-select: none;
+ display: block; /* Agar padding dan hover lebih baik */
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: #e68a00;
-  outline: none;
+ background-color: #e68a00;
+ outline: none;
 }
+
+/* Tampilan link aktif */
+.nav-link.active {
+ background-color: #d87c0d; /* oranye tua sesuai tema */
+ color: #fff5e6 !important; /* warna krem/cream lembut, bukan putih terang */
+ box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+
+/* Styling Dropdown Menu */
+.dropdown-menu {
+ display: none; /* Sembunyikan secara default */
+ position: absolute;
+ top: 100%; /* Tampilkan di bawah tombol */
+ left: 0;
+ background-color: #fff; /* Latar belakang putih */
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 10;
+ padding: 0;
+ border-radius: 5px;
+ overflow: hidden;
+ border: 1px solid #ff9800; /* Border oranye */
+}
+
+.dropdown-menu a {
+ color: #333; /* Warna teks gelap */
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+ font-weight: 500;
+ font-size: 0.95rem;
+ transition: background-color 0.2s;
+}
+
+.dropdown-menu a:hover {
+ background-color: #ffe0b2; /* Oranye muda saat hover */
+ color: #d87c0d; /* Warna oranye tua saat hover */
+ border-radius: 0;
+}
+
+/* Tampilkan dropdown saat parent di-hover */
+.dropdown:hover .dropdown-menu {
+ display: block;
+}
+
 
 /* Media query untuk layar kecil */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start; /* Bisa diganti center */
-    gap: 10px;
-  }
+ .header-container {
+ flex-direction: column;
+ align-items: flex-start; /* Bisa diganti center */
+ gap: 10px;
+ }
 
-  .nav-list {
-    flex-direction: column; /* Nav jadi vertikal di HP */
-    width: 100%;
-    gap: 10px;
-  }
+ .nav-list {
+ flex-direction: column; /* Nav jadi vertikal di HP */
+ width: 100%;
+ gap: 0px; /* Hilangkan gap di sini, pakai padding di link */
+ }
 
-  .nav-link {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 10px 0;
-  }
+ .nav-list li {
+ width: 100%;
+ }
 
-  header h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    width: 100%;
-  }
+ .nav-link {
+ width: 100%;
+ text-align: center;
+ font-size: 1.2rem;
+ padding: 10px 0;
+ border-radius: 0; /* Hilangkan border-radius di mobile agar rapi */
+ }
+
+ header h1 {
+ font-size: 1.5rem;
+ text-align: center;
+ width: 100%;
+ }
+
+ /* Dropdown di Mobile: Tampil full width */
+ .dropdown-menu {
+ position: static; /* Ubah menjadi di bawah link */
+ width: 100%;
+ box-shadow: none;
+ border: none;
+ background-color: #f7b77a; /* Latar belakang berbeda agar terlihat */
+ border-radius: 0;
+ }
+
+ .dropdown-menu a {
+ color: #fff;
+ text-align: center;
+ padding: 8px 16px;
+ background-color: rgba(0, 0, 0, 0.1); /* Sedikit gelap */
+ }
+
+ .dropdown-menu a:hover {
+ background-color: #d87c0d;
+ color: white;
+ }
 }
         main {
             flex-grow: 1;
@@ -236,15 +322,25 @@ header h1 {
     <body>
 
 
-         <header>
+<header>
   <div class="header-container">
-    <a href="index.html"><h1 style="color: #000000;">Penyakit Gigi 🦷</h1></a>
+   <a href="index.html" class="logo">
+   <img src="assets/sakit.png" alt="Logo GIMUT" />
+  </a>
     <nav aria-label="Navigasi utama">
       <ul class="nav-list">
         <li><a href="menu.html" class="nav-link ">Beranda</a></li>
-        <li><a href="rawat.html" class="nav-link ">Perawatan Gigi</a></li>
-        <li><a href="penyakit.html" class="nav-link">Penyakit Gigi</a></li>
-        <li><a href="video.html" class="nav-link">Video</a></li>
+        <li><a href="home.html" class="nav-link ">Perawatan Gigi</a></li>
+        <li><a href="tentang.html" class="nav-link">Penyakit Gigi</a></li>
+        <li class="dropdown">
+          <a href="video.html" class="nav-link dropdown-toggle">Video </a>
+          <ul class="dropdown-menu">
+            <li><a href="vgosok.html">Cara Menggosok gigi</a></li>
+            <li><a href="vakibat.html">Akibat tidak menggosok gigi</a></li>
+            <li><a href="vasal.html">Asal karang gigi</a></li>
+            <li><a href="vpenting.html">Pentingnya menjaga gigi</a></li>
+          </ul>
+        </li>
         <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
       </ul>
     </nav>
