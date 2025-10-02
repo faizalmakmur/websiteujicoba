@@ -22,15 +22,25 @@
 
   <body>
     <main>
-        <header>
+<header>
   <div class="header-container">
-    <a href="index.html"><h1 style="color: #000000;">Rawat Gigi 🦷</h1></a>
+   <a href="index.html" class="logo">
+   <img src="assets/rawat.png" alt="Logo GIMUT" />
+  </a>
     <nav aria-label="Navigasi utama">
       <ul class="nav-list">
         <li><a href="menu.html" class="nav-link ">Beranda</a></li>
-        <li><a href="rawat.html" class="nav-link ">Perawatan Gigi</a></li>
-        <li><a href="penyakit.html" class="nav-link">Penyakit Gigi</a></li>
-        <li><a href="video.html" class="nav-link">Video</a></li>
+        <li><a href="home.html" class="nav-link ">Perawatan Gigi</a></li>
+        <li><a href="tentang.html" class="nav-link">Penyakit Gigi</a></li>
+        <li class="dropdown">
+          <a href="video.html" class="nav-link dropdown-toggle">Video </a>
+          <ul class="dropdown-menu">
+            <li><a href="vgosok.html">Cara Menggosok gigi</a></li>
+            <li><a href="vakibat.html">Akibat tidak menggosok gigi</a></li>
+            <li><a href="vasal.html">Asal karang gigi</a></li>
+            <li><a href="vpenting.html">Pentingnya menjaga gigi</a></li>
+          </ul>
+        </li>
         <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
       </ul>
     </nav>
@@ -39,86 +49,172 @@
 
 <style>
   
-  header {
-  background: #ff9800; 
-  padding: 16px 24px;
-  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+   header {
+ background: #ff9800; 
+ padding: 16px 24px;
+ box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
+ color: white;
+ position: sticky;
+ top: 0;
+ z-index: 100;
 }
 
 .header-container {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Agar bisa wrap di layar kecil */
+ max-width: 960px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap; /* Agar bisa wrap di layar kecil */
+}
+
+.logo img {
+ height: 50px; /* bisa diganti sesuai kebutuhan */
+ width: auto;
+ display: block;
 }
 
 header h1 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+ margin: 0;
+ font-weight: 700;
+ font-size: 1.8rem;
+ letter-spacing: 2px;
 }
 
 /* Navigasi */
 .nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap; /* Bisa wrap di layar sempit */
-  justify-content: center; /* Center saat wrap */
+ list-style: none;
+ display: flex;
+ gap: 20px;
+ margin: 0;
+ padding: 0;
+ flex-wrap: wrap; /* Bisa wrap di layar sempit */
+ justify-content: center; /* Center saat wrap */
 }
 
+/* Container untuk Dropdown */
+.dropdown {
+ position: relative; /* Penting untuk posisi menu drop-down */
+}
+
+/* Tampilan link standar */
 .nav-link {
-  color: white !important;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 6px 12px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-  user-select: none;
+ color: white !important;
+ font-weight: 600;
+ text-decoration: none;
+ font-size: 1rem;
+ padding: 6px 12px;
+ border-radius: 20px;
+ transition: background-color 0.3s ease;
+ user-select: none;
+ display: block; /* Agar padding dan hover lebih baik */
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: #e68a00;
-  outline: none;
+ background-color: #e68a00;
+ outline: none;
 }
+
+/* Tampilan link aktif */
+.nav-link.active {
+ background-color: #d87c0d; /* oranye tua sesuai tema */
+ color: #fff5e6 !important; /* warna krem/cream lembut, bukan putih terang */
+ box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+
+/* Styling Dropdown Menu */
+.dropdown-menu {
+ display: none; /* Sembunyikan secara default */
+ position: absolute;
+ top: 100%; /* Tampilkan di bawah tombol */
+ left: 0;
+ background-color: #fff; /* Latar belakang putih */
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 10;
+ padding: 0;
+ border-radius: 5px;
+ overflow: hidden;
+ border: 1px solid #ff9800; /* Border oranye */
+}
+
+.dropdown-menu a {
+ color: #333; /* Warna teks gelap */
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+ font-weight: 500;
+ font-size: 0.95rem;
+ transition: background-color 0.2s;
+}
+
+.dropdown-menu a:hover {
+ background-color: #ffe0b2; /* Oranye muda saat hover */
+ color: #d87c0d; /* Warna oranye tua saat hover */
+ border-radius: 0;
+}
+
+/* Tampilkan dropdown saat parent di-hover */
+.dropdown:hover .dropdown-menu {
+ display: block;
+}
+
 
 /* Media query untuk layar kecil */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start; /* Bisa diganti center */
-    gap: 10px;
-  }
+ .header-container {
+ flex-direction: column;
+ align-items: flex-start; /* Bisa diganti center */
+ gap: 10px;
+ }
 
-  .nav-list {
-    flex-direction: column; /* Nav jadi vertikal di HP */
-    width: 100%;
-    gap: 10px;
-  }
+ .nav-list {
+ flex-direction: column; /* Nav jadi vertikal di HP */
+ width: 100%;
+ gap: 0px; /* Hilangkan gap di sini, pakai padding di link */
+ }
 
-  .nav-link {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 10px 0;
-  }
+ .nav-list li {
+ width: 100%;
+ }
 
-  header h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    width: 100%;
-  }
+ .nav-link {
+ width: 100%;
+ text-align: center;
+ font-size: 1.2rem;
+ padding: 10px 0;
+ border-radius: 0; /* Hilangkan border-radius di mobile agar rapi */
+ }
+
+ header h1 {
+ font-size: 1.5rem;
+ text-align: center;
+ width: 100%;
+ }
+
+ /* Dropdown di Mobile: Tampil full width */
+ .dropdown-menu {
+ position: static; /* Ubah menjadi di bawah link */
+ width: 100%;
+ box-shadow: none;
+ border: none;
+ background-color: #f7b77a; /* Latar belakang berbeda agar terlihat */
+ border-radius: 0;
+ }
+
+ .dropdown-menu a {
+ color: #fff;
+ text-align: center;
+ padding: 8px 16px;
+ background-color: rgba(0, 0, 0, 0.1); /* Sedikit gelap */
+ }
+
+ .dropdown-menu a:hover {
+ background-color: #d87c0d;
+ color: white;
+ }
 }
 .container {
    width: 100% !important;
@@ -188,9 +284,8 @@ footer p {
         <div id="target-section">
         <div class="col-md-8 mx-auto text-center text-dark">
           <h1 class="header-font text-dark" >Ayo Kita Merawat Gigi</h1>
-          <p <p class="paragraf-indent"><span class="huruf-pertama">
-          Bagaimana caranya? Yuk, kita pelajari bersama langkah-langkah sederhana <br>untuk menjaga gigi agar tetap sehat,
-        kuat, dan membuat senyum kita selalu ceria!
+          <p class="paragraf-indent"><span class="huruf-pertama">
+          Bagaimana caranya? Yuk, kita pelajari bersama!
           </p></span>
           <button class="btn mt-2 mb-2 btn-header bubbly-button" id="scrollBtn">
             Mulai Sekarang
@@ -220,7 +315,7 @@ footer p {
             </div>
             <div class="col-md-6 text-center my-auto">
               <h2 class="article-header" id="menggosok-gigi">Menggosok Gigi</h2>
-              <p>
+              <p style="text-align: justify;">
                 Menggosok gigi dua kali sehari bikin gigi sehat dan senyum jadi cerah! Yuk, gosok gigimu pagi dan malam sebelum tidur!
               </p>
             </div>
@@ -235,17 +330,16 @@ footer p {
           <div class="row">
             <div class="col-md-6 text-center my-auto">
               <h2 class="article-header">
-                Minum Susu <br />
+                Jangan Makan Makanan Manis
               </h2>
-              <p>
-                Minum susu setiap hari bisa bikin gigi jadi kuat dan sehat. Susu punya banyak kalsium yang dibutuhkan oleh gigi dan tulang kita. Yuk minum susu biar gigi kita nggak gampang copot!.
+              <p style="text-align: justify;">
+                Permen dan cokelat memang enak, tapi kalau kebanyakan, gigi kita bisa rusak dan bolong! Makanan manis bisa jadi makanan untuk kuman di gigi. Jadi, jangan sering-sering ya, dan jangan lupa sikat gigi setelahnya.
               </p>
             </div>
             <div class="col-md-6">
               
-            <div class="tenor-gif-embed" data-postid="10864178454770905473" data-share-method="host" data-aspect-ratio="1" 
-            data-width="100%"><a href="https://tenor.com/view/soda-beverage-cola-pepsi-thirst-gif-10864178454770905473">Soda Beverage Sticker</a>from <a href="https://tenor.com/search/soda-stickers">Soda Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
+            <div class="tenor-gif-embed" data-postid="754921112523929646" data-share-method="host" 
+            data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/candy-sweets-sugar-snacking-treats-gif-754921112523929646">Candy Sweets Sticker</a>from <a href="https://tenor.com/search/candy-stickers">Candy Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
             </div>
           </div>
         </div>
@@ -257,20 +351,39 @@ footer p {
         >
         <div class="row">
             <div class="col-md-6">
-            
-            <div class="tenor-gif-embed" data-postid="754921112523929646" data-share-method="host" 
-            data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/candy-sweets-sugar-snacking-treats-gif-754921112523929646">Candy Sweets Sticker</a>from <a href="https://tenor.com/search/candy-stickers">Candy Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+              <div class="tenor-gif-embed" data-postid="13094450" data-share-method="host" 
+               data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/dentist-say-ahhh-gif-13094450">Dentist Say Ahhh GIF</a>from <a href="https://tenor.com/search/dentist-gifs">Dentist GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
             </div>
             <div class="col-md-6 text-center my-auto">
               <h2 class="article-header">
-                Jangan Makan Makanan Manis
+                Periksa ke Dokter Gigi 6 bulan sekali
               </h2>
-              <p>
-                Permen dan cokelat memang enak, tapi kalau kebanyakan, gigi kita bisa rusak dan bolong! Makanan manis bisa jadi makanan untuk kuman di gigi. Jadi, jangan sering-sering ya, dan jangan lupa sikat gigi setelahnya.
-              </p>
+              <p style="text-align: justify;">
+Senyum sehat itu perlu dijaga! Dengan periksa ke dokter gigi setiap 6 bulan sekali, gigi kita bisa tetap kuat, bersih, dan terhindar dari sakit gigi. Jadi, jangan lupa ajak orang tua untuk rutin ke dokter gigi ya!              </p>
             </div>
           </div>
         </div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          class="article-card mt-5"
+        >
+          <div class="row">
+            <div class="col-md-6 text-center my-auto">
+              <h2 class="article-header">
+               Scalling Tiap 6 Bulan Sekali</h2>
+              <p style="text-align: justify;">
+               Tahukah kamu? Karang gigi nggak bisa hilang hanya dengan sikat gigi biasa. Makanya, kita perlu scaling atau pembersihan karang gigi di dokter gigi. Scaling sebaiknya dilakukan minimal 2 kali setahun agar gigi tetap sehat, bebas kuman, dan senyum kita makin percaya diri!
+              </p>
+            </div>
+            <div class="col-md-6">
+<div class="tenor-gif-embed" data-postid="24232708" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%">  
+        data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/search/smile-gifs">Smile GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            </div>
+          </div>
+        </div>
+        
         <br>
 
         <div class="col-md-8 mx-auto text-center text-dark">
@@ -315,39 +428,6 @@ footer p {
   background-color: #ffffff; 
 }
 
-header {
-  background: #ff9800; 
-  padding: 16px 24px;
-  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.5);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-header h1 {
-  margin: 0;
-  font-weight: 500;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-}
-
-.nav-link {
-  color: white; 
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 6px 14px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-  user-select: none;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  background-color: #e68a00; 
-  outline: none;
-}
 
 .article-header {
   color: #ff5722; 
