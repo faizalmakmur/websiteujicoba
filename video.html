@@ -10,21 +10,27 @@
 
 <header>
   <div class="header-container">
-   <a href="index.html" class="logo">
-   <img src="assets/video.png" alt="Logo GIMUT" />
-  </a>
-    <nav aria-label="Navigasi utama">
+    <a href="index.html" class="logo">
+      <img src="assets/logo.png" alt="Logo GIMUT" />
+    </a>
+
+    <!-- Tombol toggle menu (hanya muncul di mobile) -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav aria-label="Navigasi utama" id="nav-menu">
       <ul class="nav-list">
-        <li><a href="menu.html" class="nav-link ">Beranda</a></li>
-        <li><a href="rawat.html" class="nav-link ">Perawatan Gigi</a></li>
+        <li><a href="menu.html" class="nav-link">Beranda</a></li>
+        <li><a href="rawat.html" class="nav-link">Perawatan Gigi</a></li>
         <li><a href="penyakit.html" class="nav-link">Penyakit Gigi</a></li>
         <li class="dropdown">
           <a href="video.html" class="nav-link dropdown-toggle">Video ▼</a>
           <ul class="dropdown-menu">
-            <li><a href="vgosok.html">Cara menggosok gigi</a></li>
-            <li><a href="vakibat.html">Scalling gigi</a></li>
-            <li><a href="vasal.html">Asal karang gigi</a></li>
-            <li><a href="vpenting.html">Pentingnya menjaga gigi</a></li>
+              <li><a href="vgosok.html">Cara Menggosok Gigi</a></li>
+            <li><a href="vakibat.html">Scalling Gigi</a></li>
+            <li><a href="vasal.html">Penyebab Sakit Gigi</a></li>
+            <li><a href="vpenting.html">Cara Menjaga Gigi</a></li>
           </ul>
         </li>
         <li><a href="rumahkuis.html" class="nav-link">Kuis</a></li>
@@ -33,6 +39,67 @@
   </div>
 </header>
  <style>
+  .menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  z-index: 1001; /* pastikan di atas menu lain */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  #nav-menu {
+    display: none;
+    width: 100%;
+    background-color: #ff9800;
+    position: relative;
+    z-index: 1000; /* di bawah tombol */
+  }
+
+  #nav-menu.active {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    background-color: #ff9800;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+
+  .dropdown-menu {
+    background-color: #ffa726;
+  }
+
+  .dropdown-menu a {
+    color: #fff;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #d87c0d;
+  }
+}
+
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
     body {
@@ -178,7 +245,7 @@ header h1 {
 
  .nav-link {
  width: 100%;
- text-align: center;
+ text-align: flex-start;
  font-size: 1.2rem;
  padding: 10px 0;
  border-radius: 0; /* Hilangkan border-radius di mobile agar rapi */
@@ -292,16 +359,43 @@ header h1 {
   <h2>Daftar Video Edukasi</h2>
   <ul class="video-list">
     <li><a href="vgosok.html">🦷✨ Cara Menggosok Gigi yang Benar</a></li>
-    <li><a href="vakibat.html">🦷❗Scalling Gigi</a></li>
-    <li><a href="vasal.html">🦷👀 Asal Karang Gigi</a></li>
-    <li><a href="vpenting.html">❤️😁 Pentingnya menjaga kesehatan gigi dan mulut</a></li>
+    <li><a href="vakibat.html">🦷❗ Scalling Gigi</a></li>
+    <li><a href="vasal.html">🦷👀 Penyebab Sakit Gigi</a></li>
+    <li><a href="vpenting.html">❤️😁 Cara Menjaga Kesehatan Gigi dan Mulut</a></li>
   </ul>
 </main>
 
 <footer>
   <p>Copyright © Muhammad Faizal Makmur</p>
 </footer>
+<script>
+  // Aktifkan link sesuai halaman
+  const links = document.querySelectorAll('.nav-link');
+  const currentUrl = window.location.pathname;
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentUrl) {
+      link.classList.add('active');
+    }
+  });
+
+  // Toggle menu mobile
+  const toggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (toggle && navMenu) {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation(); // hindari klik tertutup elemen lain
+      navMenu.classList.toggle('active');
+    });
+  }
+
+  // Tutup menu saat klik di luar area
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
+      navMenu.classList.remove('active');
+    }
+  });
+</script>
 
 </body>
 </html>
-
