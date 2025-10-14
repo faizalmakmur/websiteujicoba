@@ -34,7 +34,4 @@ Klik link di bawah ini untuk melihat versi online dari website:
 
 ## 📷 Preview
 
-![Preview Website]
-
-
 <img width="1280" height="832" alt="Homepage" src="https://github.com/user-attachments/assets/19096e3c-118a-489a-84ae-15fbf1bb73ab" />
