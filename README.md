@@ -36,7 +36,8 @@ Klik link di bawah ini untuk melihat versi online dari website:
 
 ![Preview Website](screenshot.png)
 
-<img width="1893" height="919" alt="Screenshot 2025-08-01 235438" src="https://github.com/user-attachments/assets/0c41dcd4-2bb8-43a5-9e5a-382c4b452214" />
+
+<img width="1280" height="832" alt="Homepage" src="https://github.com/user-attachments/assets/19096e3c-118a-489a-84ae-15fbf1bb73ab" />
 
 
 Silakan gunakan, kembangkan, atau kontribusikan! 💡
